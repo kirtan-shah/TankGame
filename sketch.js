@@ -10,7 +10,7 @@ function setup() {
 
 }
 
-void keyPressed() {
+function keyPressed() {
   if(keyCode == 38)
     up = true;
   if(keyCode == 40)
@@ -21,7 +21,7 @@ void keyPressed() {
     right = true;
 }
 
-void keyReleased() {
+function keyReleased() {
   if(keyCode == 38)
     up = false;
   if(keyCode == 40)
@@ -33,7 +33,7 @@ void keyReleased() {
 }
 
 function draw() {
-  background(0, 220, 160);
+  background(0, 220, 200);
   if(up) y--;
   if(down) y++;
   if(left) x--;
