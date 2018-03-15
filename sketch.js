@@ -23,13 +23,13 @@ void keyPressed() {
 
 void keyReleased() {
   if(keyCode == 38)
-    up = true;
+    up = false;
   if(keyCode == 40)
-    down = true;
+    down = false;
   if(keyCode == 37)
-    left = true;
+    left = false;
   if(keyCode == 39)
-    right = true;
+    right = false;
 }
 
 function draw() {
