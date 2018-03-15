@@ -11,13 +11,13 @@ function setup() {
 }
 
 function keyPressed() {
-  if(keyCode == 38)
+  if(keyCode == UP_ARROW)
     up = true;
-  if(keyCode == 40)
+  if(keyCode == DOWN_ARROW)
     down = true;
-  if(keyCode == 37)
+  if(keyCode == LEFT_ARROW)
     left = true;
-  if(keyCode == 39)
+  if(keyCode == RIGHT_ARROW)
     right = true;
 }
 
