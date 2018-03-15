@@ -3,7 +3,7 @@
 var x = 0;
 var y = 0;
 
-var up, down, left, right;
+var up = false, down = false, left = false, right = false;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
