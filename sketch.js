@@ -1,5 +1,3 @@
-
-
 var x = 0;
 var y = 0;
 
@@ -25,13 +23,13 @@ function keyPressed() {
     left = true;
   if(keyCode == RIGHT_ARROW)
     right = true;
-  if(keyCode == SPACE) {
+  if(keyCode == 32) {
     shot = true;
-    var theta = Math.atan2(shooty - (y + 25), shootx - (x + 25));
+    var theta = Math.atan2(mouseY - (y + 25), mouseX - (x + 25));
     vx = 3.5*Math.cos(theta);
     vy = 3.5*Math.sin(theta);
-    shotx = x;
-    shoty = y;
+    shotx = x + 25;
+    shoty = y + 25;
   }
 }
 
