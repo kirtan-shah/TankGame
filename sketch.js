@@ -3,6 +3,12 @@
 var x = 0;
 var y = 0;
 
+var shootx = 0;
+var shooty = 0;
+var vx = 0;
+var vy = 0;
+var shot = false;
+
 var up = false, down = false, left = false, right = false;
 
 function setup() {
@@ -19,6 +25,14 @@ function keyPressed() {
     left = true;
   if(keyCode == RIGHT_ARROW)
     right = true;
+  if(keyCode == SPACE) {
+    shot = true;
+    var theta = Math.atan2(shooty - (y + 25), shootx - (x + 25));
+    vx = 3.5*Math.cos(theta);
+    vy = 3.5*Math.sin(theta);
+    shotx = x;
+    shoty = y;
+  }
 }
 
 function keyReleased() {
@@ -40,4 +54,10 @@ function draw() {
   if(right) x++;
   fill(0, 180, 30);
   rect(x, y, 50, 50);
+  if(shot) {
+    fill(255, 0, 0);
+    ellipse(shotx, shoty, 7, 7);
+    shotx += vx;
+    shoty += vy;
+  }
 }
