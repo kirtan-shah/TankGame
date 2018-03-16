@@ -11,7 +11,10 @@ var up = false, down = false, left = false, right = false;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-
+  var c = document.querySelector("canvas");
+  c.style.position = "absolute";
+  c.style.left = "0px";
+  c.style.right = "0px";
 }
 
 function keyPressed() {
