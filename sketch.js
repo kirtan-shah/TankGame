@@ -14,7 +14,7 @@ function setup() {
   var c = document.querySelector("canvas");
   c.style.position = "absolute";
   c.style.left = "0px";
-  c.style.right = "0px";
+  c.style.top = "0px";
 }
 
 function keyPressed() {
