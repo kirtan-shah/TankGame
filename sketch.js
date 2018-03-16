@@ -24,13 +24,17 @@ function keyPressed() {
   if(keyCode == RIGHT_ARROW)
     right = true;
   if(keyCode == 32) {
-    shot = true;
-    var theta = Math.atan2(mouseY - (y + 25), mouseX - (x + 25));
-    vx = 3.5*Math.cos(theta);
-    vy = 3.5*Math.sin(theta);
-    shotx = x + 25;
-    shoty = y + 25;
+    
   }
+}
+
+function mouseClicked() {
+  shot = true;
+  var theta = Math.atan2(mouseY - (y + 25), mouseX - (x + 25));
+  vx = 3.5*Math.cos(theta);
+  vy = 3.5*Math.sin(theta);
+  shotx = x + 25;
+  shoty = y + 25; 
 }
 
 function keyReleased() {
